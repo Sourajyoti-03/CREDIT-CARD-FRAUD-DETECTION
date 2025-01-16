@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root,
+    :root[data-theme="dark"] {
+        color-scheme: dark;
+        --theme-bg: rgb(0, 0, 0); /* Pure black background */
+        --theme-link: rgb(35, 162, 246); /* Link color */
+        --theme-text: rgb(255, 255, 255); /* Text color */
+        --theme-accent: rgb(255, 87, 34); /* Accent color */
+        --theme-accent-2: rgb(0, 0, 0); /* Darker accent */
+        --theme-quote: rgb(255, 87, 34); /* Quote color */
+    }
+
+    :root[data-theme="dark"] {
+        color-scheme: dark;
+        --theme-bg: rgb(25, 25, 25); /* Dark background */
+        --theme-link: rgb(255, 105, 180); /* Link color */
+        --theme-text: rgb(220, 220, 220); /* Text color */
+        --theme-accent: rgb(100, 149, 237); /* Accent color */
+        --theme-accent-2: rgb(200, 200, 200); /* Lighter accent */
+        --theme-quote: rgb(144, 238, 144); /* Quote color */
+    }
+}
+
+/* Floating card animation */
+@keyframes moving {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(100vw + 10rem));
+    }
+}
+
+/* General styling */
+:root {
+    font-size: calc(1vw + 1vh + 1.5vmin);
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    font-family: "Vibur", cursive; /* Set font-family */
+    font-size: 1rem; /* Base font size */
+    background-image: url("https://drive.google.com/uc?export=view&id=1F2fPNNonEmj1ohhOGIOW2Xzk1xMkdoFh");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #141414; /* Fallback background color */
+}
+
+.container {
+    text-align: center;
+    margin: 120px auto;
+}
+
+h1 {
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Sign Styles */
+.sign {
+    min-height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sign span {
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1.5;
+    color: var(--theme-text); /* Use theme text color */
+    animation: neon .08s ease-in-out infinite alternate;
+}
+
+/* Animation Keyframes for Neon Effect */
+@keyframes neon {
+    from {
+        text-shadow:
+        0 0 6px rgba(202,228,225,0.92),
+        0 0 30px rgba(202,228,225,0.34),
+        0 0 12px rgba(30,132,242,0.52),
+        0 0 21px rgba(30,132,242,0.92),
+        0 0 34px rgba(30,132,242,0.78),
+        0 0 54px rgba(30,132,242,0.92);
+    }
+    to {
+        text-shadow:
+        0 0 6px rgba(202,228,225,0.98),
+        0 0 
