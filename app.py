@@ -9,7 +9,7 @@ app = Flask(__name__)
 # Load the trained model
 model = joblib.load('final_model.pkl')
 
-@app.route('/')
+@app.route('/', methods=['GET', 'HEAD'])
 def home():
     return render_template('home.html')
 
